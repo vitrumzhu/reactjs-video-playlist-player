@@ -3,7 +3,8 @@ import videoPlaceHolder from './images/video-placeholder.jpg'
 import {
   Playlist,
   goToNextVideo,
-  goToPreviousVideo
+  goToPreviousVideo,
+  goFullScreen,
 } from 'reactjs-video-playlist-player'
 import './css/globals.css'
 import './css/playlist.css'
@@ -12,27 +13,17 @@ import Buttons from './buttons/Buttons'
 function App() {
   const [list, setList] = useState([
     {
-      thumbnail: 'https://via.placeholder.com/500/FFA500/FFFFFF',
+      thumbnail: 'https://via.placeholder.com/200/FFA500/FFFFFF',
       url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
       imgAlt: 'alt img 1'
     },
     {
-      thumbnail: 'https://via.placeholder.com/500/FF0000/FFFFFF',
+      thumbnail: 'https://via.placeholder.com/300/FF0000/FFFFFF',
       url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
       imgAlt: 'alt img 2'
     },
     {
-      thumbnail: ' ',
-      url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-      imgAlt: 'alt img 3'
-    },
-    {
-      thumbnail: 'https://via.placeholder.com/500/FFFF00/000000',
-      url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-      imgAlt: 'alt img 4'
-    },
-    {
-      thumbnail: '',
+      thumbnail: 'https://via.placeholder.com/400/BB00DD/FFFFFF',
       url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
       imgAlt: 'alt img 5'
     }
@@ -44,6 +35,7 @@ function App() {
   const params = {
     videos: list,
     autoPlay: true,
+    fullScreen: true,
     showQueue: true,
     playForward: true,
     defaultQueueItemPlaceholderThumbnail: videoPlaceHolder,
@@ -55,13 +47,14 @@ function App() {
   return (
     <div className='App'>
       <h3 id='title'>
-        <span>React.js</span> video playlist player 🎥
+        <span>map</span> Video Player 🎥
       </h3>
       <div>
         <Playlist playlistParams={params} />
         <Buttons
           goToNextVideo={goToNextVideo}
           goToPreviousVideo={goToPreviousVideo}
+          goFullScreen={goFullScreen}
           params={params}
         />
       </div>

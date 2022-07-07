@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect } from 'react'
+import screenfull from 'screenfull'
 import PlaylistQueue from './PlaylistQueue'
 
 const goToNextVideo = (params) => {
@@ -30,6 +31,14 @@ const goToPreviousVideo = (params) => {
     } else {
       params.setCurrentVideo(params.currentVideo + 1)
     }
+  }
+}
+
+const goFullScreen = (params) => {
+  if (screenfull.isEnabled) {
+    console.log('goFullScreen', params)
+    const video = params.vidRef.current
+    screenfull.request(video);
   }
 }
 
@@ -98,4 +107,4 @@ function Playlist({ playlistParams }) {
   )
 }
 
-export { Playlist, goToNextVideo, goToPreviousVideo }
+export { Playlist, goToNextVideo, goToPreviousVideo, goFullScreen }

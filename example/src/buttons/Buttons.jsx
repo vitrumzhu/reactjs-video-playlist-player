@@ -1,6 +1,6 @@
 import React from "react";
 
-function Buttons({ goToPreviousVideo, goToNextVideo, params }) {
+function Buttons({ goToPreviousVideo, goToNextVideo, goFullScreen, params }) {
   return (
     <>
       <div className="btnsContainer">
@@ -15,6 +15,9 @@ function Buttons({ goToPreviousVideo, goToNextVideo, params }) {
         </button>
         <button className="btn" onClick={() => params.vidRef.current.play()}>
           Play
+        </button>
+        <button className="btn" onClick={() => goFullScreen(params)}>
+          FullScreen
         </button>
       </div>
     </>

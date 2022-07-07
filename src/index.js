@@ -1,3 +1,3 @@
-import { Playlist, goToNextVideo, goToPreviousVideo } from './playlist/Playlist'
+import { Playlist, goToNextVideo, goToPreviousVideo, goFullScreen } from './playlist/Playlist'
 
-export { Playlist, goToPreviousVideo, goToNextVideo }
+export { Playlist, goToPreviousVideo, goToNextVideo, goFullScreen }
