@@ -14,18 +14,21 @@ function App() {
   const [list, setList] = useState([
     {
       thumbnail: 'https://via.placeholder.com/200/FFA500/FFFFFF',
-      url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-      imgAlt: 'alt img 1'
+      url: '/video/Evade3_1080p.mp4',
+      imgAlt: 'alt img 1',
+      qrcode: 'video01 qrcode'
     },
     {
       thumbnail: 'https://via.placeholder.com/300/FF0000/FFFFFF',
-      url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
-      imgAlt: 'alt img 2'
+      url: '/video/GreatNearbyEpisode3_1080p.mp4',
+      imgAlt: 'alt img 2',
+      qrcode: 'video02 code'
     },
     {
       thumbnail: 'https://via.placeholder.com/400/BB00DD/FFFFFF',
-      url: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
-      imgAlt: 'alt img 5'
+      url: '/video/SWORKS-TORCH-1080p.mp4',
+      imgAlt: 'alt img 5',
+      qrcode: 'video03~~🚴~'
     }
   ])
 

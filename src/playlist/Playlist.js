@@ -35,10 +35,11 @@ const goToPreviousVideo = (params) => {
 }
 
 const goFullScreen = (params) => {
+  const videoContainer = document.getElementById("player")
   if (screenfull.isEnabled) {
-    console.log('goFullScreen', params)
-    const video = params.vidRef.current
-    screenfull.request(video);
+    // console.log('goFullScreen', params)
+    // const video = params.vidRef.current
+    screenfull.request(videoContainer);
   }
 }
 
@@ -81,15 +82,19 @@ function Playlist({ playlistParams }) {
   return (
     <Fragment>
       {videos.length > 0 && (
-        <div className='video-container-styles'>
-          <video
-            className='video-styles'
-            autoPlay={autoPlay}
-            muted={autoPlay ? true : false}
-            ref={vidRef}
-            src={videos[currentVideo].url}
-            controls={true}
-          ></video>
+        <>
+          <div className='video-container-styles' id='player'>
+            <video
+              className='video-styles'
+              autoPlay={autoPlay}
+              muted={autoPlay ? true : false}
+              ref={vidRef}
+              src={videos[currentVideo].url}
+              controls={true}
+              controlsList='nodownload'
+            ></video>
+            <div className='video-QRCODE'>{videos[currentVideo].qrcode}</div>
+          </div>
           {showQueue && (
             <PlaylistQueue
               vidRef={vidRef}
@@ -101,7 +106,7 @@ function Playlist({ playlistParams }) {
               }
             />
           )}
-        </div>
+        </>
       )}
     </Fragment>
   )
