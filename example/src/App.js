@@ -11,6 +11,7 @@ import './css/playlist.css'
 import Buttons from './buttons/Buttons'
 
 function App() {
+  // eslint-disable-next-line
   const [list, setList] = useState([
     {
       thumbnail: 'https://via.placeholder.com/200/FFA500/FFFFFF',

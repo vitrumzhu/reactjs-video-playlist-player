@@ -26,6 +26,8 @@ code {
 }
 .video-QRCODE {
   background-color: #fff;
+  background-image: url('/qrcode.bmp');
+  background-size: cover;
   position: absolute;
   color: #000;
   width: 5vw;
@@ -33,4 +35,5 @@ code {
   animation-name: vidwoframes;
   animation-duration: 20s;
   animation-iteration-count: infinite;
+  text-indent: -888em;
 }
