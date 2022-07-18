@@ -14,26 +14,31 @@ code {
 }
 
 @keyframes vidwoframes {
-  0%   {background-color:red; left:3em; top:3em; right:unset; bottom:unset;}
-  25%  {background-color:yellow; left:unset; top:3em; right:3em; bottom:unset;}
-  50%  {background-color:blue; left:unset; top:unset; right:3em; bottom:3em;}
-  75%  {background-color:green; left:3em; top:unset; right:unset; bottom:3em;}
-  100% {background-color:red; left:3em; top:3em; right: unset; bottom:unset;}
+  0%   { left:3em; top:3em; right:unset; bottom:unset;}
+  25%  { left:unset; top:3em; right:3em; bottom:unset;}
+  50%  { left:unset; top:unset; right:3em; bottom:3em;}
+  75%  { left:3em; top:unset; right:unset; bottom:3em;}
+  100% { left:3em; top:3em; right: unset; bottom:unset;}
 }
 
 .video-container-styles {
   position: relative;
 }
+
 .video-QRCODE {
   background-color: #fff;
-  background-image: url('/qrcode.bmp');
+  /* background-image: url('/qrcode.bmp'); */
   background-size: cover;
   position: absolute;
   color: #000;
-  width: 5vw;
-  height: 5vw;
+  width: 92px;
+  height: 92px;
   animation-name: vidwoframes;
-  animation-duration: 20s;
+  animation-duration: 80s;
   animation-iteration-count: infinite;
-  text-indent: -888em;
+}
+.video-QRCODE svg {
+  width: 80px;
+  height: 80px;
+  padding: 6px;
 }

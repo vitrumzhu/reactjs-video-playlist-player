@@ -14,23 +14,35 @@ function App() {
   // eslint-disable-next-line
   const [list, setList] = useState([
     {
-      thumbnail: 'https://via.placeholder.com/200/FFA500/FFFFFF',
-      url: '/video/Evade3_1080p.mp4',
-      imgAlt: 'alt img 1',
-      qrcode: 'video01 qrcode'
-    },
-    {
-      thumbnail: 'https://via.placeholder.com/300/FF0000/FFFFFF',
-      url: '/video/GreatNearbyEpisode3_1080p.mp4',
-      imgAlt: 'alt img 2',
-      qrcode: 'video02 code'
-    },
-    {
       thumbnail: 'https://via.placeholder.com/400/BB00DD/FFFFFF',
-      url: '/video/SWORKS-TORCH-1080p.mp4',
+      url: '/video/3104_EDIT_DUO_v05-PR422_Subtitled_chs.mp4',
       imgAlt: 'alt img 5',
-      qrcode: 'video03~~🚴~'
-    }
+      qrcode: 'https://specialized.com.cn/'
+    },
+    {
+      thumbnail: 'https://via.placeholder.com/100/00ffDD/FFFFFF',
+      url: '/video/Aethos Simply for the pure love of riding.mp4',
+      imgAlt: 'Aethos',
+      qrcode: 'https://specialized.com.cn/products/s-works-aethos-dura-ace-di2-187062?_pos=3&_sid=97a766715&_ss=r&variant=41383308067009'
+    },
+    {
+      thumbnail: 'https://via.placeholder.com/200/FFA500/FFFFFF',
+      url: '/video/3104_EDIT_EVADE_v09-PR422_Subtitled_chs.mp4',
+      imgAlt: 'EVADE',
+      qrcode: 'https://specialized.com.cn/collections/helmets/products/s-works-evade-3-220799?variant=41720299389121'
+    },
+    // {
+    //   thumbnail: 'https://via.placeholder.com/300/FF00DD/FFFFFF',
+    //   url: '/video/AllezSprint_teaser2_16x9_final.mp4',
+    //   imgAlt: 'AllezSprint',
+    //   qrcode: 'https://specialized.com.cn/products/allez-sprint-frameset-189820?_pos=6&_sid=ba1971049&_ss=r&variant=41427865108673'
+    // },
+    {
+      thumbnail: 'https://via.placeholder.com/300/CCBB00/FFFFFF',
+      url: '/video/3104_EDIT_PREVAIL_v09-PR422_Subtitled_chs2.mp4',
+      imgAlt: 'PREVAIL',
+      qrcode: 'https://specialized.com.cn/products/s-works-prevail-3-220798?_pos=10&_sid=fdb24d6a8&_ss=r'
+    },
   ])
 
   const [currentVideo, setCurrentVideo] = useState(0)

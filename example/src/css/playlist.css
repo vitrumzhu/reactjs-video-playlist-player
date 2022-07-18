@@ -1,4 +1,4 @@
-.video-container-styles{
+.video-container-styles, .playlist-queue-styles{
     width:60%;
     margin:0 auto;
 }
@@ -41,7 +41,7 @@
 }
 
 @media screen and (max-width: 549px) {
-  .video-container-styles{
+  .video-container-styles, .playlist-queue-styles{
     width:100%;
   }
 }
