@@ -37,10 +37,12 @@ const goToPreviousVideo = (params) => {
 
 const goFullScreen = (params) => {
   const videoContainer = document.getElementById("player")
+  const videoPlayer = document.getElementById("videoplayer")
   if (screenfull.isEnabled) {
     // console.log('goFullScreen', params)
     // const video = params.vidRef.current
     screenfull.request(videoContainer);
+    videoPlayer.muted = false;
   }
 }
 
@@ -59,6 +61,7 @@ function Playlist({ playlistParams }) {
   useEffect(() => {
     setCurrentVideo(playForward ? 0 : videos.length - 1)
   }, [])
+
   useEffect(() => {
     if (videos.length > 0) {
       vidRef.current.onended = () => {
@@ -80,12 +83,14 @@ function Playlist({ playlistParams }) {
       }
     }
   }, [currentVideo])
+  
   return (
     <Fragment>
       {videos.length > 0 && (
         <>
           <div className='video-container-styles' id='player'>
             <video
+              id='videoplayer'
               className='video-styles'
               autoPlay={autoPlay}
               muted={autoPlay ? true : false}
